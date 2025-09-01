@@ -3,4 +3,6 @@ deployment:
     - export DEPLOYPATH=/home/q1saj8a0n6sa/public_html/
     - /usr/local/bin/npm install
     - /usr/local/bin/npm run build
-    - /usr/local/bin/rsync -a --delete dist/ $DEPLOYPATH
+    - /usr/local/bin/rsync -av --delete dist/ $DEPLOYPATH
+    - /usr/bin/find $DEPLOYPATH -type d -exec chmod 755 {} \;
+    - /usr/bin/find $DEPLOYPATH -type f -exec chmod 644 {} \;
