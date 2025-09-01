@@ -31,7 +31,6 @@ const Home = () => {
               1000,
             ]}
             wrapper="span"
-            className="italic"
             speed={30}
             repeat={Infinity}
           />
